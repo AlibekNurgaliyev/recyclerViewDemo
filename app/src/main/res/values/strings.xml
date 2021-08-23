@@ -12,4 +12,7 @@
     <string name="title">ToDo Title</string>
     <string name="duedate">03.11.1988</string>
     <string name="placeholder_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="high">High</string>
 </resources>

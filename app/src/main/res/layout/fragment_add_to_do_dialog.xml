@@ -142,8 +142,4 @@
         app:layout_constraintTop_toTopOf="@+id/btn_add"
         app:layout_constraintBottom_toBottomOf="@+id/btn_add"/>
 
-
-
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
