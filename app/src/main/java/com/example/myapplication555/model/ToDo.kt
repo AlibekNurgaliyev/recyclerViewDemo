@@ -9,6 +9,6 @@ import kotlinx.android.parcel.Parcelize
 data class ToDo(
     var title: String,
     var description: String,
-    var dueDateval: String,
+    var dueDate: String,
     var priority: Priorities
 ) : Parcelable

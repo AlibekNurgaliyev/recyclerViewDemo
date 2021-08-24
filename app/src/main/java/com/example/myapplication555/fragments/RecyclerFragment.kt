@@ -11,7 +11,7 @@ import com.example.myapplication555.R
 import kotlinx.android.synthetic.main.fragment_recycler.*
 
 class RecyclerFragment : Fragment() {
-
+     private var isFabOpen = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,9 +23,33 @@ class RecyclerFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        hideFabMenu()
+        fab.setOnClickListener {
+            if(isFabOpen){
+                hideFabMenu()
+            }
+            else {
+                showFabMenu()
+            }
+        }
+
         fab_add.setOnClickListener{
             findNavController().navigate(R.id.action_recyclerFragment_to_addToDoDialog)
         }
+    }
+
+    private fun showFabMenu(){
+        isFabOpen = true
+        fab.animate().alpha(0.5f)
+        fab_add.animate().translationY(-resources.getDimension(R.dimen.fab_move_upwards_65))
+        fab_search.animate().translationY(-resources.getDimension(R.dimen.fab_move_upwards_125))
+    }
+
+    private fun hideFabMenu(){
+        isFabOpen = false
+        fab.animate().alpha(1f)
+        fab_add.animate().translationY(0f)
+        fab_search.animate().translationY(0f)
     }
 
     override fun onStart() {

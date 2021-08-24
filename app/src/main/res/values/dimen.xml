@@ -33,4 +33,7 @@
     <dimen name="standard_55">65dp</dimen>
     <dimen name="standard_105">125dp</dimen>
     <dimen name="standard_155">170dp</dimen>
+
+    <dimen name="fab_move_upwards_65">65dp</dimen>
+    <dimen name="fab_move_upwards_125">125dp</dimen>
 </resources>
